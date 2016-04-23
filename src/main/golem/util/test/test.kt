@@ -23,7 +23,8 @@ fun assertMatrixEquals(A: Matrix<Double>, B: Matrix<Double>, eps: Double = 1e-6)
 }
 
 private var facs = arrayOf(golem.matrix.ejml.EJMLMatrixFactory(),
-                           golem.matrix.mtj.MTJMatrixFactory())
+                           golem.matrix.mtj.MTJMatrixFactory(),
+                           golem.matrix.jblas.JBlasMatrixFactory())
 
 /**
  * A helper function to run tests against all backends in sequence. Sets [golem.factory] to each backend
