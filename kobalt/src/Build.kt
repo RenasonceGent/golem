@@ -1,5 +1,6 @@
 import com.beust.kobalt.*
 import com.beust.kobalt.api.Project
+import com.beust.kobalt.plugin.application.application
 import com.beust.kobalt.plugin.packaging.*
 import com.beust.kobalt.plugin.publish.bintray
 
@@ -65,6 +66,11 @@ val backend_ejml = project(core) {
         compile("org.jetbrains.kotlin:kotlin-stdlib:$kotVersion")
         compile("org.ejml:all:0.27")
     }
+    application {
+        mainClass = "MainKt"
+    }
+
+
 }
 
 val backend_jblas = project(core) {
